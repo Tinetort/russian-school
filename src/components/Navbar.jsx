@@ -152,23 +152,27 @@ const Navbar = () => {
                                 </Link>
                             </li>
                         </ul>
-                        <div className="pt-40">
+                        <div className="pt-30">
                             <p className="uppercase tracking-widest text-black">
                                 Let's Connect
                             </p>
                         </div>
                         <div className="flex items-center justify-center sm:w-[80%] md:w-[65%]">
                             <div className="p-2 m-1 rounded-full shadow-lg shadow-gray-400 cursor-pointer hover:scale-105 ease-in duration-75">
-                                <FaPhone
-                                    className="no-underline text-black"
-                                    size={20}
-                                />
+                                <Link href="tel:+1 (858) 779-4914">
+                                    <FaPhone
+                                        className="no-underline text-black"
+                                        size={20}
+                                    />
+                                </Link>
                             </div>
                             <div className="p-2 m-1 rounded-full shadow-lg shadow-gray-400 cursor-pointer hover:scale-105 ease-in duration-75">
-                                <IoMdMail
-                                    className="no-underline text-black"
-                                    size={20}
-                                />
+                                <Link href="mailto:info@sdrussianschool.com">
+                                    <IoMdMail
+                                        className="no-underline text-black"
+                                        size={20}
+                                    />
+                                </Link>
                             </div>
                             <div className="p-2 m-1 rounded-full shadow-lg shadow-gray-400 cursor-pointer hover:scale-105 ease-in duration-75">
                                 <Link href="https://www.facebook.com/SanDiegoRussianSchool">
