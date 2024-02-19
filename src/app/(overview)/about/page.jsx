@@ -49,7 +49,7 @@ const Page = () => {
                         <Row className="items-center">
                             <Col className="p-2 flex items-center justify-center">
                                 <Card>
-                                    <Card.Img variant="top" src={gramota} />
+                                    <Card.Img variant="top" src={people} />
                                     <Card.Body>
                                         <Card.Text>
                                             Ежегодно наши ученики пишут
@@ -180,7 +180,7 @@ const Page = () => {
                         <Row className="items-center">
                             <Col className="p-2 flex items-center justify-center">
                                 <Card>
-                                    <Card.Img variant="top" src={people} />
+                                    <Card.Img variant="top" src={gramota} />
                                 </Card>
                             </Col>
                         </Row>
