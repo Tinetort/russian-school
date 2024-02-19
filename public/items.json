@@ -1,0 +1,24 @@
+{
+    "items": {
+        "bootstrap": [
+            {
+                "id": 1,
+                "title": "Photography",
+                "body": "Bootstrap Carousel Example",
+                "imageUrl": "public/SR_23.09.07_InstructionalTime_feature-jpg.webp",
+            },
+            {
+                "id": 2,
+                "title": "City Views",
+                "body": "Bootstrap Carousel Example",
+                "imageUrl": "public/SR_23.09.07_InstructionalTime_feature-jpg.webp",
+            },
+            {
+                "id": 3,
+                "title": "Wild Life",
+                "body": "Bootstrap Carousel Example",
+                "imageUrl": "public/original.jpg",
+            }
+        ]
+    }
+}
