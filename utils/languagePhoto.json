@@ -1,5 +1,10 @@
 {
-   "firstPhoto":"/second-1.jpg",
-   "secondPhoto":"/second-2.jpg",
-   "credits":"/credits.jpg"
+    "firstPhoto": "/second-1.jpg",
+    "secondPhoto": "/second-2.jpg",
+    "credits": "/credits.jpg",
+    "nasa": "/about-nasa.jpg",
+    "gramota": "/about-gramoty.jpg",
+    "uley": "/about-uley.jpg",
+    "nikolay": "/about-nikolay.jpg",
+    "people":"about-people.jpg"
 }
