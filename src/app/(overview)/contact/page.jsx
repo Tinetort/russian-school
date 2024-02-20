@@ -145,7 +145,8 @@ const Page = () => {
                     className="text-[#ff854e] border-2 border-[#ff854e] rounded-full p-1"
                 />
                 <h2>We are located at</h2>
-                <p>UCSD Campus Location 9500 Gilman Dr, </p>
+                <p>UCSD Campus Location</p>
+                <p>9500 Gilman Dr</p>
                 <p>La Jolla, CA 92093</p>
             </div>
         </div>
