@@ -38,7 +38,7 @@ const Page = () => {
                             <Col className="p-2 flex items-center justify-center">
                                 <Card>
                                     <Card.Img variant="top" src={nadya} />
-                                    <Accordion defaultActiveKey="0">
+                                    <Accordion>
                                         <Accordion.Item eventKey="0">
                                             <Accordion.Header>
                                                 ...тогда учитель истории Torrey
@@ -198,7 +198,7 @@ const Page = () => {
                             <Col className="p-2 flex items-center justify-center">
                                 <Card>
                                     <Card.Img variant="top" src={michael} />
-                                    <Accordion defaultActiveKey="1">
+                                    <Accordion>
                                         <Accordion.Item eventKey="1">
                                             <Accordion.Header className="w-full">
                                                 I'm grateful to the San Diego
@@ -246,7 +246,7 @@ const Page = () => {
                             <Col className="p-2 flex items-center justify-center">
                                 <Card>
                                     <Card.Img variant="top" src={maxim} />
-                                    <Accordion defaultActiveKey="2">
+                                    <Accordion>
                                         <Accordion.Item eventKey="2">
                                             <Accordion.Header className="w-full">
                                                 The Russian history lectures
@@ -302,7 +302,7 @@ const Page = () => {
                             <Col className="p-2 flex items-center justify-center">
                                 <Card>
                                     <Card.Img variant="top" src={lev} />
-                                    <Accordion defaultActiveKey="3">
+                                    <Accordion>
                                         <Accordion.Item eventKey="3">
                                             <Accordion.Header className="w-full">
                                                 Russian School enriched my life
@@ -346,7 +346,7 @@ const Page = () => {
                             <Col className="p-2 flex items-center justify-center">
                                 <Card>
                                     <Card.Img variant="top" src={alexandra} />
-                                    <Accordion defaultActiveKey="4">
+                                    <Accordion>
                                         <Accordion.Item eventKey="4">
                                             <Accordion.Header className="w-full">
                                                 I'm working on my PhD and
@@ -394,7 +394,7 @@ const Page = () => {
                             <Col className="p-2 flex items-center justify-center">
                                 <Card>
                                     <Card.Img variant="top" src={ivan} />
-                                    <Accordion defaultActiveKey="5">
+                                    <Accordion>
                                         <Accordion.Item eventKey="5">
                                             <Accordion.Header className="w-full">
                                                 In tech there are a frightening
@@ -442,7 +442,7 @@ const Page = () => {
                             <Col className="p-2 flex items-center justify-center">
                                 <Card>
                                     <Card.Img variant="top" src={alice} />
-                                    <Accordion defaultActiveKey="7">
+                                    <Accordion>
                                         <Accordion.Item eventKey="7">
                                             <Accordion.Header>
                                                 … it was also through Russian
@@ -560,7 +560,7 @@ const Page = () => {
                             <Col className="p-2 flex items-center justify-center">
                                 <Card>
                                     <Card.Img variant="top" src={konstantin} />
-                                    <Accordion defaultActiveKey="8">
+                                    <Accordion>
                                         <Accordion.Item eventKey="8">
                                             <Accordion.Header>
                                                 San Diego Russian School
@@ -628,7 +628,7 @@ const Page = () => {
                             <Col className="p-2 flex items-center justify-center">
                                 <Card>
                                     <Card.Img variant="top" src={olga} />
-                                    <Accordion defaultActiveKey="9">
+                                    <Accordion>
                                         <Accordion.Item eventKey="9">
                                             <Accordion.Header>
                                                 My 7 years of education in
