@@ -83,7 +83,7 @@ const Page = () => {
                                             better than me, a historian! Take an
                                             example from them!»
                                         </Card.Header>
-                                        <div className="flex justify-center items-center">
+                                        <div className="flex justify-center items-center p-1">
                                             <ContextAwareToggle eventKey="nadya"></ContextAwareToggle>
                                         </div>
                                         <Accordion.Collapse eventKey="nadya">
@@ -219,7 +219,7 @@ const Page = () => {
                                                 my ancestors.
                                             </p>
                                         </Card.Header>
-                                        <div className="flex justify-center items-center">
+                                        <div className="flex justify-center items-center p-1">
                                             <ContextAwareToggle eventKey="michael"></ContextAwareToggle>
                                         </div>
                                         <Accordion.Collapse eventKey="michael">
@@ -269,7 +269,7 @@ const Page = () => {
                                                 historical events…{' '}
                                             </p>
                                         </Card.Header>
-                                        <div className="flex justify-center items-center">
+                                        <div className="flex justify-center items-center p-1">
                                             <ContextAwareToggle eventKey="maxim"></ContextAwareToggle>
                                         </div>
                                         <Accordion.Collapse eventKey="maxim">
@@ -328,7 +328,7 @@ const Page = () => {
                                                 in innumerable ways…
                                             </p>
                                         </Card.Header>
-                                        <div className="flex justify-center items-center">
+                                        <div className="flex justify-center items-center p-1">
                                             <ContextAwareToggle eventKey="lev"></ContextAwareToggle>
                                         </div>
                                         <Accordion.Collapse eventKey="lev">
@@ -381,7 +381,7 @@ const Page = () => {
                                                 published only in Russian…
                                             </p>
                                         </Card.Header>
-                                        <div className="flex justify-center items-center">
+                                        <div className="flex justify-center items-center p-1">
                                             <ContextAwareToggle eventKey="alexandra"></ContextAwareToggle>
                                         </div>
                                         <Accordion.Collapse eventKey="alexandra">
@@ -433,7 +433,7 @@ const Page = () => {
                                                 and networking in general…{' '}
                                             </p>
                                         </Card.Header>
-                                        <div className="flex justify-center items-center">
+                                        <div className="flex justify-center items-center p-1">
                                             <ContextAwareToggle eventKey="ivan"></ContextAwareToggle>
                                         </div>
                                         <Accordion.Collapse eventKey="ivan">
@@ -484,7 +484,7 @@ const Page = () => {
                                                 internship…
                                             </p>
                                         </Card.Header>
-                                        <div className="flex justify-center items-center">
+                                        <div className="flex justify-center items-center p-1">
                                             <ContextAwareToggle eventKey="alice"></ContextAwareToggle>
                                         </div>
                                         <Accordion.Collapse eventKey="alice">
@@ -611,7 +611,7 @@ const Page = () => {
                                                 literature…
                                             </p>
                                         </Card.Header>
-                                        <div className="flex justify-center items-center">
+                                        <div className="flex justify-center items-center p-1">
                                             <ContextAwareToggle eventKey="konstantin"></ContextAwareToggle>
                                         </div>
                                         <Accordion.Collapse eventKey="konstantin">
@@ -687,7 +687,7 @@ const Page = () => {
                                                 heritage with…
                                             </p>
                                         </Card.Header>
-                                        <div className="flex justify-center items-center">
+                                        <div className="flex justify-center items-center p-1">
                                             <ContextAwareToggle eventKey="olga"></ContextAwareToggle>
                                         </div>
                                         <Accordion.Collapse eventKey="olga">
