@@ -8,7 +8,7 @@ const { nasa, gramota, uley, nikolay, people } = languagePhoto
 const Page = () => {
     return (
         <div className="bg-gradient-to-b from-[#b0dfef] via-gray-200 to-[#ff9161]">
-            <div className="flex flex-col justify-center w-full  h-80 ">
+            <div className="flex flex-col justify-center w-full p-16">
                 <h1 className="text-center uppercase text-[#015ebb] ">
                     About the school
                 </h1>
@@ -64,8 +64,9 @@ const Page = () => {
                                     <Card.Img variant="top" src={nasa} />
                                     <Card.Body>
                                         <Card.Text>
-                                            Встреча с англо-русским переводчиком
-                                            НАСА
+                                            Один из уроков: "Встреча с
+                                            профессией. Встреча с англо-русским
+                                            переводчиком."
                                         </Card.Text>
                                     </Card.Body>
                                 </Card>

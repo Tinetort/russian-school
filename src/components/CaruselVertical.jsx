@@ -20,6 +20,9 @@ function CaruselVertical() {
                     </Link>
                 </button>
             </div>
+            <Container>
+                
+            </Container>
             <Carousel className="hidden md:block" fade data-bs-theme="dark">
                 <Carousel.Item>
                     <div>

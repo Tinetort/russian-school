@@ -1,8 +1,43 @@
 'use client'
-import { Col, Container, Row, Button, Card } from 'react-bootstrap'
-import Accordion from 'react-bootstrap/Accordion'
-import Link from 'next/link'
+import { Col, Container, Row, Card, Accordion } from 'react-bootstrap'
+import { useContext } from 'react'
+import AccordionContext from 'react-bootstrap/AccordionContext'
+import { useAccordionButton } from 'react-bootstrap/AccordionButton'
 import languagePhoto from '../../../../../utils/languagePhoto.json'
+
+function ContextAwareToggle({ children, eventKey, callback }) {
+    const { activeEventKey } = useContext(AccordionContext)
+
+    const decoratedOnClick = useAccordionButton(
+        eventKey,
+        () => callback && callback(eventKey)
+    )
+    const isCurrentEventKey = activeEventKey === eventKey
+
+    return (
+        <button
+            type="button"
+            style={{
+                backgroundColor: 'rgb(16, 202, 240)',
+                width: '100px',
+                height: '40px',
+                border: 'none',
+                borderRadius: '20px',
+                boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
+                color: 'black',
+                fontSize: '16px',
+                fontWeight: 'bold',
+                cursor: 'pointer',
+                outline: 'none',
+                transition: 'background-color 0.3s ease',
+            }}
+            onClick={decoratedOnClick}
+        >
+            {isCurrentEventKey ? 'Less' : 'More'}
+            {children}
+        </button>
+    )
+}
 
 const { nadya, michael, maxim, lev, alexandra, ivan, alice, olga, konstantin } =
     languagePhoto
@@ -10,47 +45,49 @@ const { nadya, michael, maxim, lev, alexandra, ivan, alice, olga, konstantin } =
 const Page = () => {
     return (
         <div className="bg-gradient-to-b from-[#b0dfef] via-gray-200 to-[#ff9161]">
-            <div className="flex flex-col justify-center w-full  h-80 ">
+            <div className="flex flex-col justify-center w-full p-10 ">
                 <h1 className="text-center uppercase text-[#015ebb] ">
                     Alumni
                 </h1>
             </div>
             <Container>
-                <div className="border border-warning rounded-4 my-4 p-2">
+                <div className="border border-warning rounded-4 p-2">
                     <p className="mt-4 ml-4">
-                        The Russian school is proud of it's alumni students, who
+                        The Russian school is proud of its alumni students, who
                         have found successful careers after finishing
-                        prestigious colleges in U.S. Our school not only helped
-                        them preserve their Russian language and widen the scope
-                        of their knowledge but also aided them in the
+                        prestigious colleges in the U.S. Our school not only
+                        helped them preserve their Russian language and widen
+                        the scope of their knowledge but also aided them in the
                         application process, finding a relevant practicum in
-                        their field and launching their careers.
+                        their field, and launching their careers.
                     </p>
                     <p className="mt-4 ml-4">
                         We asked our alumni to tell us how their lives have
-                        progressed since their graduation out of our school and
-                        how the material they learned in San Diego Russian
+                        progressed since their graduation from our school and
+                        how the material they learned in the San Diego Russian
                         School benefited their adult life.
                     </p>
                     <Container>
-                        <h2>Надя Горелов</h2>
+                        <h2>Nadya Gorelov</h2>
                         <Row className="items-center mb-5">
                             <Col className="p-2 flex items-center justify-center">
                                 <Card>
                                     <Card.Img variant="top" src={nadya} />
                                     <Accordion>
-                                        <Accordion.Item eventKey="0">
-                                            <Accordion.Header>
-                                                ...тогда учитель истории Torrey
-                                                Pines High School сказал всему
-                                                классу: «I was proven wrong! As
-                                                you can see, Russian people know
-                                                the history of their country
-                                                well, even better than me, a
-                                                historian! Take an example from
-                                                them!»
-                                            </Accordion.Header>
-                                            <Accordion.Body>
+                                        <Card.Header>
+                                            ...тогда учитель истории Torrey
+                                            Pines High School сказал всему
+                                            классу: «I was proven wrong! As you
+                                            can see, Russian people know the
+                                            history of their country well, even
+                                            better than me, a historian! Take an
+                                            example from them!»
+                                        </Card.Header>
+                                        <div className="flex justify-center items-center">
+                                            <ContextAwareToggle eventKey="nadya"></ContextAwareToggle>
+                                        </div>
+                                        <Accordion.Collapse eventKey="nadya">
+                                            <Card.Body>
                                                 <p>
                                                     Я родилась в Сан Диего и
                                                     училась в Русской школе 10
@@ -88,38 +125,6 @@ const Page = () => {
                                                     истории, связанные с русским
                                                     языком. Вот несколько из
                                                     них.
-                                                </p>
-                                                <p>
-                                                    На уроке Современной Истории
-                                                    в High School учитель
-                                                    рассказывал о России: «Тема
-                                                    сегодняшнего урока – сказал
-                                                    учитель, - Августовский путч
-                                                    1990-ого года.» Я подняла
-                                                    руку и поправила учителя:
-                                                    «Это было не в 1990-ом году,
-                                                    а в 1991-ом.» Учитель
-                                                    ответил, что я ошибаюсь, он
-                                                    точно знает, что
-                                                    государственный переворот
-                                                    случился в 1990. Я
-                                                    настаивала на 91-ом. «Ну
-                                                    хорошо, ребята, давай
-                                                    проверим кто из нас прав,
-                                                    учитель Истории или ученик!»
-                                                    Гуугл подтвердил, что в путч
-                                                    случился именно 1991-ом. И
-                                                    тогда учитель сказал классу:
-                                                    «Вот, дети, я оказался
-                                                    неправ! Запомните – русские
-                                                    люди хорошо знают историю
-                                                    своей страны! Лучше учителей
-                                                    истории!» На самом деле, это
-                                                    была заслуга нашего учителя
-                                                    Истории в Русской школе Наум
-                                                    Исааковича, который очень
-                                                    интересно рассказывал нам
-                                                    историю России.
                                                 </p>
                                                 <p>
                                                     Однажды, благодаря русскому,
@@ -187,8 +192,8 @@ const Page = () => {
                                                     Сибири. Мы с ним
                                                     подружились.
                                                 </p>
-                                            </Accordion.Body>
-                                        </Accordion.Item>
+                                            </Card.Body>
+                                        </Accordion.Collapse>
                                     </Accordion>
                                 </Card>
                             </Col>
@@ -199,17 +204,26 @@ const Page = () => {
                                 <Card>
                                     <Card.Img variant="top" src={michael} />
                                     <Accordion>
-                                        <Accordion.Item eventKey="1">
-                                            <Accordion.Header className="w-full">
-                                                I'm grateful to the San Diego
+                                        <Card.Header>
+                                            <p>
+                                                I am grateful to the San Diego
                                                 Russian School for instilling in
-                                                me pride in my family heritage.
-                                                Through their teachings, I've
-                                                learned to appreciate the rich
-                                                cultural legacy passed down
-                                                through generations.
-                                            </Accordion.Header>
-                                            <Accordion.Body>
+                                                me a pride in my family
+                                                heritage, strengthening my
+                                                attachment to my native culture
+                                                and language, and providing me
+                                                with the opportunity to gain a
+                                                deeper understanding and
+                                                appreciation of the values and
+                                                traditions passed down to me by
+                                                my ancestors.
+                                            </p>
+                                        </Card.Header>
+                                        <div className="flex justify-center items-center">
+                                            <ContextAwareToggle eventKey="michael"></ContextAwareToggle>
+                                        </div>
+                                        <Accordion.Collapse eventKey="michael">
+                                            <Card.Body>
                                                 <p>
                                                     "I am currently a senior at
                                                     Stanford University studying
@@ -235,26 +249,31 @@ const Page = () => {
                                                     with me for the rest of my
                                                     life."
                                                 </p>
-                                            </Accordion.Body>
-                                        </Accordion.Item>
+                                            </Card.Body>
+                                        </Accordion.Collapse>
                                     </Accordion>
                                 </Card>
                             </Col>
                         </Row>
-                        <h2>Maxim Zaslavsky</h2>
+                        <h2>Maxim Zaslavsky </h2>
                         <Row className="items-center mb-5">
                             <Col className="p-2 flex items-center justify-center">
                                 <Card>
                                     <Card.Img variant="top" src={maxim} />
                                     <Accordion>
-                                        <Accordion.Item eventKey="2">
-                                            <Accordion.Header className="w-full">
+                                        <Card.Header>
+                                            <p>
                                                 The Russian history lectures
                                                 were my favorite – because we
                                                 talked about the logic of
-                                                historical events…
-                                            </Accordion.Header>
-                                            <Accordion.Body>
+                                                historical events…{' '}
+                                            </p>
+                                        </Card.Header>
+                                        <div className="flex justify-center items-center">
+                                            <ContextAwareToggle eventKey="maxim"></ContextAwareToggle>
+                                        </div>
+                                        <Accordion.Collapse eventKey="maxim">
+                                            <Card.Body>
                                                 <p>
                                                     Maxim is currently a
                                                     sophomore at Princeton
@@ -291,8 +310,8 @@ const Page = () => {
                                                     interact with the world
                                                     around me."
                                                 </p>
-                                            </Accordion.Body>
-                                        </Accordion.Item>
+                                            </Card.Body>
+                                        </Accordion.Collapse>
                                     </Accordion>
                                 </Card>
                             </Col>
@@ -303,12 +322,17 @@ const Page = () => {
                                 <Card>
                                     <Card.Img variant="top" src={lev} />
                                     <Accordion>
-                                        <Accordion.Item eventKey="3">
-                                            <Accordion.Header className="w-full">
+                                        <Card.Header>
+                                            <p>
                                                 Russian School enriched my life
                                                 in innumerable ways…
-                                            </Accordion.Header>
-                                            <Accordion.Body>
+                                            </p>
+                                        </Card.Header>
+                                        <div className="flex justify-center items-center">
+                                            <ContextAwareToggle eventKey="lev"></ContextAwareToggle>
+                                        </div>
+                                        <Accordion.Collapse eventKey="lev">
+                                            <Card.Body>
                                                 <p>
                                                     "I graduated out of UC Santa
                                                     Cruz with a degree in
@@ -335,8 +359,8 @@ const Page = () => {
                                                     bilingual abilities looks
                                                     great on my Resumes."
                                                 </p>
-                                            </Accordion.Body>
-                                        </Accordion.Item>
+                                            </Card.Body>
+                                        </Accordion.Collapse>
                                     </Accordion>
                                 </Card>
                             </Col>
@@ -347,16 +371,21 @@ const Page = () => {
                                 <Card>
                                     <Card.Img variant="top" src={alexandra} />
                                     <Accordion>
-                                        <Accordion.Item eventKey="4">
-                                            <Accordion.Header className="w-full">
+                                        <Card.Header>
+                                            <p>
                                                 I'm working on my PhD and
                                                 professors in my department
                                                 occasionally ask me to translate
                                                 information for them from old,
                                                 obscure scientific manuscripts
                                                 published only in Russian…
-                                            </Accordion.Header>
-                                            <Accordion.Body>
+                                            </p>
+                                        </Card.Header>
+                                        <div className="flex justify-center items-center">
+                                            <ContextAwareToggle eventKey="alexandra"></ContextAwareToggle>
+                                        </div>
+                                        <Accordion.Collapse eventKey="alexandra">
+                                            <Card.Body>
                                                 <p>
                                                     "I studied biology at
                                                     Harvard, where my knowledge
@@ -383,8 +412,8 @@ const Page = () => {
                                                     scientific manuscripts
                                                     published only in Russian."
                                                 </p>
-                                            </Accordion.Body>
-                                        </Accordion.Item>
+                                            </Card.Body>
+                                        </Accordion.Collapse>
                                     </Accordion>
                                 </Card>
                             </Col>
@@ -395,15 +424,20 @@ const Page = () => {
                                 <Card>
                                     <Card.Img variant="top" src={ivan} />
                                     <Accordion>
-                                        <Accordion.Item eventKey="5">
-                                            <Accordion.Header className="w-full">
+                                        <Card.Header>
+                                            <p>
                                                 In tech there are a frightening
                                                 number of Russian folks. Being
                                                 able to speak has greatly helped
                                                 with meeting new people at work
-                                                and networking in general…
-                                            </Accordion.Header>
-                                            <Accordion.Body>
+                                                and networking in general…{' '}
+                                            </p>
+                                        </Card.Header>
+                                        <div className="flex justify-center items-center">
+                                            <ContextAwareToggle eventKey="ivan"></ContextAwareToggle>
+                                        </div>
+                                        <Accordion.Collapse eventKey="ivan">
+                                            <Card.Body>
                                                 <p>
                                                     "After I graduated from high
                                                     school, I went to college at
@@ -431,8 +465,8 @@ const Page = () => {
                                                     I've lived in the US for so
                                                     long!"
                                                 </p>
-                                            </Accordion.Body>
-                                        </Accordion.Item>
+                                            </Card.Body>
+                                        </Accordion.Collapse>
                                     </Accordion>
                                 </Card>
                             </Col>
@@ -443,13 +477,18 @@ const Page = () => {
                                 <Card>
                                     <Card.Img variant="top" src={alice} />
                                     <Accordion>
-                                        <Accordion.Item eventKey="7">
-                                            <Accordion.Header>
+                                        <Card.Header>
+                                            <p>
                                                 … it was also through Russian
                                                 School that I got my first
                                                 internship…
-                                            </Accordion.Header>
-                                            <Accordion.Body>
+                                            </p>
+                                        </Card.Header>
+                                        <div className="flex justify-center items-center">
+                                            <ContextAwareToggle eventKey="alice"></ContextAwareToggle>
+                                        </div>
+                                        <Accordion.Collapse eventKey="alice">
+                                            <Card.Body>
                                                 <p>
                                                     "Attending SDRS, was like
                                                     stepping into a small
@@ -499,6 +538,7 @@ const Page = () => {
                                                     I am not exaggerating when I
                                                     say that these two novels
                                                     impact my life to this day.
+                                                    <br />
                                                     Besides all the Russian
                                                     related opportunities that
                                                     SDRS gave me, it was also
@@ -549,8 +589,8 @@ const Page = () => {
                                                     and finally study abroad in
                                                     the country of my family."
                                                 </p>
-                                            </Accordion.Body>
-                                        </Accordion.Item>
+                                            </Card.Body>
+                                        </Accordion.Collapse>
                                     </Accordion>
                                 </Card>
                             </Col>
@@ -561,16 +601,21 @@ const Page = () => {
                                 <Card>
                                     <Card.Img variant="top" src={konstantin} />
                                     <Accordion>
-                                        <Accordion.Item eventKey="8">
-                                            <Accordion.Header>
+                                        <Card.Header>
+                                            <p>
                                                 San Diego Russian School
                                                 curriculum goes far beyond the
                                                 basics and provides a fully
                                                 immersive experience through
                                                 lessons focused on history and
                                                 literature…
-                                            </Accordion.Header>
-                                            <Accordion.Body>
+                                            </p>
+                                        </Card.Header>
+                                        <div className="flex justify-center items-center">
+                                            <ContextAwareToggle eventKey="konstantin"></ContextAwareToggle>
+                                        </div>
+                                        <Accordion.Collapse eventKey="konstantin">
+                                            <Card.Body>
                                                 <p>
                                                     "I graduated from SDSU in
                                                     2011 with a degree in
@@ -617,8 +662,8 @@ const Page = () => {
                                                     культуру русскоязычной
                                                     диаспоре San Diego."
                                                 </p>
-                                            </Accordion.Body>
-                                        </Accordion.Item>
+                                            </Card.Body>
+                                        </Accordion.Collapse>
                                     </Accordion>
                                 </Card>
                             </Col>
@@ -629,8 +674,8 @@ const Page = () => {
                                 <Card>
                                     <Card.Img variant="top" src={olga} />
                                     <Accordion>
-                                        <Accordion.Item eventKey="9">
-                                            <Accordion.Header>
+                                        <Card.Header>
+                                            <p>
                                                 My 7 years of education in
                                                 Russian Scool gave me not only a
                                                 chance to connect with my
@@ -640,8 +685,13 @@ const Page = () => {
                                                 who, like me, were searching 
                                                 for someone to explore their
                                                 heritage with…
-                                            </Accordion.Header>
-                                            <Accordion.Body>
+                                            </p>
+                                        </Card.Header>
+                                        <div className="flex justify-center items-center">
+                                            <ContextAwareToggle eventKey="olga"></ContextAwareToggle>
+                                        </div>
+                                        <Accordion.Collapse eventKey="olga">
+                                            <Card.Body>
                                                 <p>
                                                     "I am a high school junior
                                                     who attended SDRS for seven
@@ -685,8 +735,8 @@ const Page = () => {
                                                     and Punishment" in its
                                                     original language!"
                                                 </p>
-                                            </Accordion.Body>
-                                        </Accordion.Item>
+                                            </Card.Body>
+                                        </Accordion.Collapse>
                                     </Accordion>
                                 </Card>
                             </Col>
