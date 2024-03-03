@@ -4,8 +4,8 @@ import Link from 'next/link'
 const Page = () => {
     return (
         <div className="flex flex-col justify-between">
-            <div className="p-16">
-                <h1 className="text-center uppercase text-[#015ebb]">
+            <div>
+                <h1 className="text-center uppercase text-[#015ebb] p-6">
                     Registration
                 </h1>
             </div>
