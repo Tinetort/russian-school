@@ -1,7 +1,6 @@
 'use client'
 import { Col, Container, Row, Button, Card } from 'react-bootstrap'
 
-import { MdKeyboardBackspace } from 'react-icons/md'
 import Link from 'next/link'
 import languagePhoto from '../../../../../utils/languagePhoto.json'
 import WhereToGoButtons from '@/components/WhereToGoButtons'
@@ -9,7 +8,7 @@ import WhereToGoButtons from '@/components/WhereToGoButtons'
 const { nasa, gramota, uley, nikolay, people, georg } = languagePhoto
 const Page = () => {
     return (
-        <div >
+        <div>
             <div className="flex flex-col justify-center w-full p-10">
                 <h1 className="text-center uppercase text-[#015ebb] ">
                     Native Speaker Classes
@@ -67,33 +66,69 @@ const Page = () => {
                     ежегодный регистрационный взнос $50 (старые ученики) $100
                     (новые)
                 </p>
-                <Container>
-                    <Row className="items-center">
-                        <Col className="p-2 flex items-center justify-center">
-                            <Card>
-                                <Card.Img variant="top" src={people} />
-                                <Card.Body>
-                                    <Card.Text>
-                                        Ежегодно наши ученики пишут сочинения на
-                                        русском языке и участвуют в конкурсах
-                                    </Card.Text>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                        <Col className="p-2 flex items-center justify-center">
-                            <Card>
-                                <Card.Img variant="top" src={nasa} />
-                                <Card.Body>
-                                    <Card.Text>
-                                        Один из уроков “Встреча с профессией”.
-                                        Урок ведет англо-русский переводчик
-                                        НАСА.
-                                    </Card.Text>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                    </Row>
-                </Container>
+                <div className="hidden md:block">
+                    <Container>
+                        <Row className="items-center">
+                            <Col className="p-2 flex items-center justify-center">
+                                <Card>
+                                    <Card.Img variant="top" src={people} />
+                                    <Card.Body>
+                                        <Card.Text>
+                                            Ежегодно наши ученики пишут
+                                            сочинения на русском языке и
+                                            участвуют в конкурсах
+                                        </Card.Text>
+                                    </Card.Body>
+                                </Card>
+                            </Col>
+                            <Col className="p-2 flex items-center justify-center">
+                                <Card>
+                                    <Card.Img variant="top" src={nasa} />
+                                    <Card.Body>
+                                        <Card.Text>
+                                            Один из уроков “Встреча с
+                                            профессией”. Урок ведет
+                                            англо-русский переводчик НАСА.
+                                        </Card.Text>
+                                    </Card.Body>
+                                </Card>
+                            </Col>
+                        </Row>
+                    </Container>
+                </div>
+                <div className="block md:hidden">
+                    <Container>
+                        <Row className="items-center">
+                            <Col className="p-2 flex items-center justify-center">
+                                <Card>
+                                    <Card.Img variant="top" src={people} />
+                                    <Card.Body>
+                                        <Card.Text>
+                                            Ежегодно наши ученики пишут
+                                            сочинения на русском языке и
+                                            участвуют в конкурсах
+                                        </Card.Text>
+                                    </Card.Body>
+                                </Card>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col className="p-2 flex items-center justify-center">
+                                <Card>
+                                    <Card.Img variant="top" src={nasa} />
+                                    <Card.Body>
+                                        <Card.Text>
+                                            Один из уроков “Встреча с
+                                            профессией”. Урок ведет
+                                            англо-русский переводчик НАСА.
+                                        </Card.Text>
+                                    </Card.Body>
+                                </Card>
+                            </Col>
+                        </Row>
+                    </Container>
+                </div>
+
                 <ul>
                     Три года назад наша школа перешла в он-лайн формат, который
                     показал несомненные преимущества для дополнительного
@@ -129,20 +164,41 @@ const Page = () => {
                         aренду помещения.{' '}
                     </li>
                 </ul>
-                <Container>
-                    <Row className="items-center">
-                        <Col className="p-2 flex items-center justify-center">
-                            <Card>
-                                <Card.Img variant="top" src={uley} />
-                            </Card>
-                        </Col>
-                        <Col className="p-2 flex items-center justify-center">
-                            <Card>
-                                <Card.Img variant="top" src={nikolay} />
-                            </Card>
-                        </Col>
-                    </Row>
-                </Container>
+                <div className="hidden md:block">
+                    <Container>
+                        <Row className="items-center">
+                            <Col className="p-2 flex items-center justify-center">
+                                <Card>
+                                    <Card.Img variant="top" src={uley} />
+                                </Card>
+                            </Col>
+                            <Col className="p-2 flex items-center justify-center">
+                                <Card>
+                                    <Card.Img variant="top" src={nikolay} />
+                                </Card>
+                            </Col>
+                        </Row>
+                    </Container>
+                </div>
+                <div className="block md:hidden">
+                    <Container>
+                        <Row className="items-center">
+                            <Col className="p-2 flex items-center justify-center">
+                                <Card>
+                                    <Card.Img variant="top" src={uley} />
+                                </Card>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col className="p-2 flex items-center justify-center">
+                                <Card>
+                                    <Card.Img variant="top" src={nikolay} />
+                                </Card>
+                            </Col>
+                        </Row>
+                    </Container>
+                </div>
+
                 <p>
                     Русская школа Сан Диего существует 25 лет и за эти годы в
                     ней выучилось не одно поколение детей, хорошо говорящих на
@@ -193,22 +249,40 @@ const Page = () => {
                     коллектив русской интеллигенции и даем возможность детям
                     заниматься с разными преподавателями по разным предметам.{' '}
                 </p>
-                <Container>
-                    <Row className="items-center">
-                        <Col className="p-2 flex items-center justify-center">
-                            <Card>
-                                <Card.Img variant="top" src={gramota} />
-                            </Card>
-                        </Col>
-                        <Col className="p-2 flex items-center justify-center">
-                            <Card>
-                                <Card.Img variant="top" src={georg} />
-                            </Card>
-                        </Col>
-                    </Row>
-                </Container>
+                <div className="hidden md:block">
+                    <Container>
+                        <Row className="items-center">
+                            <Col className="p-2 flex items-center justify-center">
+                                <Card>
+                                    <Card.Img variant="top" src={gramota} />
+                                </Card>
+                            </Col>
+                            <Col className="p-2 flex items-center justify-center">
+                                <Card>
+                                    <Card.Img variant="top" src={georg} />
+                                </Card>
+                            </Col>
+                        </Row>
+                    </Container>
+                    <div className="block md:hidden">
+                        <Row className="items-center">
+                            <Col className="p-2 flex items-center justify-center">
+                                <Card>
+                                    <Card.Img variant="top" src={gramota} />
+                                </Card>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col className="p-2 flex items-center justify-center">
+                                <Card>
+                                    <Card.Img variant="top" src={georg} />
+                                </Card>
+                            </Col>
+                        </Row>
+                    </div>
+                </div>
             </Container>
-            <WhereToGoButtons/>
+            <WhereToGoButtons />
         </div>
     )
 }
