@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const WhereToGoButtons = () => {
     return (
-        <div>
+        <div className='mb-4'>
             <Container fluid>
                 <div className="p-5 hidden items-center md:block md:flex-col md:items-center">
                     <Row className="text-center items-center">
