@@ -9,7 +9,7 @@ import Link from 'next/link'
 
 const Page = () => {
     return (
-        <div className="bg-gradient-to-b from-[#b0dfef] via-gray-200 to-[#ff9161]">
+        <div>
             <div className="flex flex-col justify-center w-full mb-14">
                 <div className="text-center uppercase text-[#015ebb] mb-10 mt-20 p-4">
                     <h1>Contact Us</h1>

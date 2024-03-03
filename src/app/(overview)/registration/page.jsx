@@ -1,25 +1,21 @@
 import { Col, Container, Row, Button } from 'react-bootstrap'
-
 import Link from 'next/link'
 
 const Page = () => {
     return (
-        <div className="bg-gradient-to-b from-[#b0dfef] via-gray-200 to-[#ff9161]">
-            <div className="flex flex-col justify-center w-full p-16">
+        <div className="flex flex-col justify-between">
+            <div className="p-16">
                 <h1 className="text-center uppercase text-[#015ebb]">
                     Registration
                 </h1>
-                <p className="text-center uppercase text-[#015ebb] ">
-                    Registration for the 2023-2024 school year is now open!
-                </p>
             </div>
-            <Container>
+            <Container className="flex-grow">
                 <div className="border border-warning rounded-4">
-                    <h2 className="text-center uppercase text-black p-2">
+                    <h2 className="text-center uppercase text-black p-6">
                         Click on one of the buttons below to register for
                         classes:
                     </h2>
-                    <Container className="p-14 items-center hidden md:block">
+                    <Container className=" items-center hidden md:block">
                         <Container fluid>
                             <Row className="text-center items-center pb-44">
                                 <Col className="p-2">
@@ -80,7 +76,7 @@ const Page = () => {
                                 </Button>
                             </Col>
                         </Row>
-                        <Row className="text-center items-center pb-20">
+                        <Row className="text-center items-center">
                             <Col className="p-2">
                                 <Button className="bg-info uppercase">
                                     <Link

@@ -3,17 +3,18 @@ import { MdKeyboardBackspace } from 'react-icons/md'
 import languagePhoto from '../../../../../utils/languagePhoto.json'
 import Image from 'react-bootstrap/Image'
 import Link from 'next/link'
+import WhereToGoButtons from '@/components/WhereToGoButtons'
 
 const Page = () => {
     return (
-        <div className="bg-gradient-to-b from-[#b0dfef] via-gray-200 to-[#ff9161]">
-            <div className="flex flex-col justify-center w-full  h-80 ">
+        <div className="bg-gradient-to-b from-[#ff9161] via-gray-200 to-[#b0dfef]">
+            <div className="flex flex-col justify-center w-full h-48 ">
                 <h1 className="text-center uppercase text-[#015ebb] ">
-                    Program for non-Russian speakers
+                    RUSSIAN AS A SECOND LANGUAGE
                 </h1>
             </div>
             <Container>
-                <div className="p-16">
+                <div className="p-10">
                     <div className="border border-warning rounded-4">
                         <h2 className="uppercase text-black p-2">
                             Russian as a Second Language
@@ -81,11 +82,12 @@ const Page = () => {
                     </Col>
                 </Row>
             </Container>
-            <div className="pb-10 ml-10 ">
+            {/* <div className="pb-10 ml-10 ">
                 <Link className="no-underline text-black" href="/about">
                     <MdKeyboardBackspace size={30} />
                 </Link>
-            </div>
+            </div> */}
+            <WhereToGoButtons/>
         </div>
     )
 }

@@ -1,6 +1,10 @@
 import React from 'react';
 import { FaPhone } from 'react-icons/fa';
 import { IoMdMail } from 'react-icons/io';
+import { AiFillInstagram } from 'react-icons/ai'
+import { FaFacebook } from 'react-icons/fa'
+
+
 import Link from 'next/link';
 
 const Footer = () => {
@@ -21,6 +25,21 @@ const Footer = () => {
                             <Link href="mailto:info@sdrussianschool.com">
                                 <IoMdMail size={20} className="no-underline text-black" />
                             </Link>
+                        </div>
+                        <div className="p-2 m-1 rounded-full bg-white shadow-lg cursor-pointer hover:scale-105 ease-in duration-75">
+                        <Link href="https://www.facebook.com/SanDiegoRussianSchool">
+                                    <FaFacebook
+                                        className="no-underline text-black"
+                                        size={20}
+                                    />
+                                </Link>
+                        </div><div className="p-2 m-1 rounded-full bg-white shadow-lg cursor-pointer hover:scale-105 ease-in duration-75">
+                        <Link href="https://www.instagram.com/sdrussianschool/">
+                                    <AiFillInstagram
+                                        className="no-underline text-black"
+                                        size={20}
+                                    />
+                                </Link>
                         </div>
                     </div>
                 </div>

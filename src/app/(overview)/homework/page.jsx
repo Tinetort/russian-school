@@ -3,11 +3,11 @@ import Link from 'next/link'
 
 const Page = () => {
     return (
-        <div className="bg-gradient-to-b from-[#b0dfef] via-gray-200 to-[#ff9161]">
+        <div>
             <div className="flex flex-col justify-center w-full">
                 <div className="text-center uppercase text-[#015ebb] mb-10 mt-16 p-4">
                     <h1>
-                        Домашнее задание для отделения “Образование на Русском
+                        Домашнее задание для отделения <hr /> “Образование на Русском
                         языке”
                     </h1>
                     <h2>Native Speakers Program home assignments</h2>

@@ -22,7 +22,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className="w-full h-20 bg-[rgba(178,223,239,0.9)] border-2 border-b-red-700 shadow-gray-400 p-2">
+        <div className="w-full h-20 bg-[rgb(178,223,239)] border-2 border-b-red-700 shadow-gray-400 p-2">
             <div className="flex justify-around items-center h-full w-full mx-2 2xl:px-16">
                 <Image src={logo} alt="logo-png" width={120} />
                 <div>
@@ -33,7 +33,7 @@ const Navbar = () => {
                                 href="/"
                                 onClick={closeMenu}
                             >
-                                Homepage
+                                Home
                             </Link>
                         </li>
                         <li className="ml-10 text-sm  uppercase">
@@ -112,7 +112,7 @@ const Navbar = () => {
                                     href="/"
                                     onClick={closeMenu}
                                 >
-                                    Homepage
+                                    Home
                                 </Link>
                             </li>
                             <li className="py-4 text-sm">
