@@ -12,13 +12,20 @@ const Page = () => {
                 <h1 className="text-center uppercase text-[#015ebb] ">
                     RUSSIAN AS A SECOND LANGUAGE
                 </h1>
+                <div className="flex flex-col z-20 items-center pt-5">
+                    <button className="rounded-full relative h-[50px] w-44 overflow-hidden border border-[#b0dfef] bg-[#025dbb]">
+                        <Link
+                            className="relative z-30 cursor-pointer uppercase no-underline text-white"
+                            href="https://docs.google.com/forms/d/e/1FAIpQLScLMPmSES7x7DV1cutaNQsD5OLS6hasX8gwoeMy2Uqx9vq5OA/viewform"
+                        >
+                            Registration
+                        </Link>
+                    </button>
+                </div>
             </div>
             <Container>
                 <div className="p-10">
                     <div className="border border-warning rounded-4">
-                        <h2 className="uppercase text-black p-2">
-                            Russian as a Second Language
-                        </h2>
                         <p className="p-2">
                             Russian as a Second Language classes are open to
                             individuals of all ages and backgrounds, with or

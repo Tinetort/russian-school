@@ -13,6 +13,16 @@ const Page = () => {
                 <h1 className="text-center uppercase text-[#015ebb] ">
                     Native Speaker Classes
                 </h1>
+                <div className="flex flex-col z-20 items-center pt-5">
+                    <button className="rounded-full relative h-[50px] w-44 overflow-hidden border border-[#b0dfef] bg-[#025dbb]">
+                        <Link
+                            className="relative z-30 cursor-pointer uppercase no-underline text-white"
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSeMJHazhZwL0ZgzQI4rpo9NtaIdITjtf0OYNVhVufOCm0v2PA/viewform"
+                        >
+                            Registration
+                        </Link>
+                    </button>
+                </div>
             </div>
             <Container className="p-10">
                 <p className="ml-4">

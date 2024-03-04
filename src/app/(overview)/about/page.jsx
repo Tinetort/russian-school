@@ -28,66 +28,74 @@ const Page = () => {
 
             <div className="p-5 flex items-center md:flex md:flex-col md:items-center">
                 <Container>
-                    <Row className="text-center items-center">
-                        <Col className="p-2">
-                            <Button className="bg-info uppercase">
-                                <Link
-                                    className="no-underline text-black"
-                                    href="/about/native"
-                                >
-                                    Native speaker classes
-                                </Link>
-                            </Button>
+                    <Row>
+                        <Col className="p-2 m-1 border border-warning rounded-4">
                             <Col>
                                 <p className="p-1">
-                                    Native Speaker Classes: Designed for
-                                    individuals fluent in Russian, these classes
-                                    provide an opportunity for advanced
-                                    linguistic and cultural exploration,
-                                    fostering a deeper understanding and
-                                    appreciation of the Russian language and
-                                    heritage.
+                                    <span className="uppercase text-[#025dbb] font-bold">
+                                        Native Speaker Classes
+                                    </span>{' '}
+                                    Designed for individuals fluent in Russian,
+                                    these classes provide an opportunity for
+                                    advanced linguistic and cultural
+                                    exploration, fostering a deeper
+                                    understanding and appreciation of the
+                                    Russian language and heritage.{' '}
+                                    <Button className="bg-info uppercase">
+                                        <Link
+                                            className="no-underline text-black"
+                                            href="/about/native"
+                                        >
+                                            More
+                                        </Link>
+                                    </Button>
                                 </p>
                             </Col>
                         </Col>
                     </Row>
-                    <Row className="text-center items-center">
-                        <Col className="p-2">
-                            <Button className="bg-info uppercase">
-                                <Link
-                                    className="no-underline text-black"
-                                    href="/about/second-language"
-                                >
-                                    Russian as second language
-                                </Link>
-                            </Button>
+                    <Row>
+                        <Col className="p-2 m-1 border border-warning rounded-4">
                             <p className="p-1">
-                                Classes for Non-Russian Speakers: Tailored
-                                specifically for those new to the Russian
-                                language, these classes offer a comprehensive
-                                introduction to Russian grammar, vocabulary, and
-                                culture, laying a strong foundation for language
-                                proficiency and cultural immersion.
+                                <span className="uppercase text-[#025dbb] font-bold">
+                                    Classes for Non-Russian Speakers
+                                </span>{' '}
+                                Tailored specifically for those new to the
+                                Russian language, these classes offer a
+                                comprehensive introduction to Russian grammar,
+                                vocabulary, and culture, laying a strong
+                                foundation for language proficiency and cultural
+                                immersion.{' '}
+                                <Button className="bg-info uppercase">
+                                    <Link
+                                        className="no-underline text-black"
+                                        href="/about/second-language"
+                                    >
+                                        More
+                                    </Link>
+                                </Button>
                             </p>
                         </Col>
                     </Row>
-                    <Row className="text-center items-center">
-                        <Col className="p-2">
-                            <Button className="bg-info uppercase">
-                                <Link
-                                    className="no-underline text-black"
-                                    href="/about/credits"
-                                >
-                                    Classes for High School Credit
-                                </Link>
-                            </Button>
+                    <Row>
+                        <Col className="p-2 m-1 border border-warning rounded-4">
                             <p className="p-2">
-                                Classes for High School Credits: Recognizing the
-                                importance of language education in academic
-                                curricula, our high school credit classes enable
-                                students to earn credits while enhancing their
-                                Russian language skills, preparing them for
-                                future academic and professional pursuits.
+                                <span className="uppercase text-[#025dbb] font-bold">
+                                    Classes for High School Credits
+                                </span>{' '}
+                                Recognizing the importance of language education
+                                in academic curricula, our high school credit
+                                classes enable students to earn credits while
+                                enhancing their Russian language skills,
+                                preparing them for future academic and
+                                professional pursuits.{' '}
+                                <Button className="bg-info uppercase">
+                                    <Link
+                                        className="no-underline text-black"
+                                        href="/about/credits"
+                                    >
+                                        More
+                                    </Link>
+                                </Button>
                             </p>
                         </Col>
                     </Row>
